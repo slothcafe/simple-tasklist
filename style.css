@@ -1,0 +1,52 @@
+body {
+  font-family: sans-serif;
+  margin: 20px;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+li.task {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 4px 0;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #f9f9f9;
+}
+li.completed {
+  text-decoration: line-through;
+  color: gray;
+  background: #eee;
+}
+.task-name {
+  font-weight: bold;
+  margin: 0 6px;
+  min-width: 100px;
+}
+.memo, .deadline {
+  font-size: 0.9em;
+  margin: 0 6px;
+  padding: 2px 4px;
+}
+.controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+}
+.controls button {
+  border: none;
+  background: none;
+  font-size: 1em;
+  cursor: pointer;
+  padding: 2px;
+}
+.controls button:hover {
+  color: darkred;
+}
+select.template-select {
+  margin-left: 10px;
+}

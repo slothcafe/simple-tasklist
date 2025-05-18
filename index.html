@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>TODO管理ツール</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>TODO管理</h1>
+  <button onclick="addTask()">＋ タスク追加</button>
+  <label>
+    <select id="templateSelect" class="template-select">
+      <option value="">テンプレートから追加</option>
+    </select>
+  </label>
+  <label style="margin-left: 10px;">
+    <input type="checkbox" id="showCompleted" checked onchange="renderTasks()" />
+    完了タスクを表示
+  </label>
+  <ul id="taskList"></ul>
+
+  <script src="templates.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
