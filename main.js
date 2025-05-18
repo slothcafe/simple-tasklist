@@ -178,7 +178,7 @@ function renderTasks() {
         controls.className = 'controls';
 
         const upBtn = document.createElement('button');
-        upBtn.textContent = '⬆️';
+        upBtn.textContent = '▲';
         upBtn.title = '上に移動';
         upBtn.onclick = () => {
             moveTask(task.id, 'up');
@@ -187,7 +187,7 @@ function renderTasks() {
         };
 
         const downBtn = document.createElement('button');
-        downBtn.textContent = '⬇️';
+        downBtn.textContent = '▼';
         downBtn.title = '下に移動';
         downBtn.onclick = () => {
             moveTask(task.id, 'down');
@@ -196,7 +196,7 @@ function renderTasks() {
         };
 
         const addSubBtn = document.createElement('button');
-        addSubBtn.textContent = '➕';
+        addSubBtn.textContent = '＋';
         addSubBtn.title = 'サブタスク追加';
         addSubBtn.onclick = () => addTask(task.id);
 
