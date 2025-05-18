@@ -1,11 +1,15 @@
+/* === 基本スタイル === */
 body {
   font-family: sans-serif;
   margin: 20px;
+  font-size: 16px;
 }
+
 ul {
   list-style-type: none;
   padding-left: 0;
 }
+
 li.task {
   display: flex;
   align-items: center;
@@ -16,27 +20,32 @@ li.task {
   border-radius: 4px;
   background: #f9f9f9;
 }
+
 li.completed {
   text-decoration: line-through;
   color: gray;
   background: #eee;
 }
+
 .task-name {
   font-weight: bold;
   margin: 0 6px;
   min-width: 100px;
 }
+
 .memo, .deadline {
   font-size: 0.9em;
   margin: 0 6px;
   padding: 2px 4px;
 }
+
 .controls {
   display: inline-flex;
   align-items: center;
   gap: 4px;
   margin-left: auto;
 }
+
 .controls button {
   border: none;
   background: none;
@@ -44,9 +53,54 @@ li.completed {
   cursor: pointer;
   padding: 2px;
 }
+
 .controls button:hover {
   color: darkred;
 }
+
 select.template-select {
   margin-left: 10px;
+}
+
+/* === モバイル最適化（レスポンシブ） === */
+@media (max-width: 600px) {
+  body {
+    margin: 10px;
+    font-size: 16px;
+  }
+
+  li.task {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-name,
+  .memo,
+  .deadline {
+    width: 100%;
+    margin: 4px 0;
+  }
+
+  .controls {
+    margin-left: 0;
+    margin-top: 6px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .controls button {
+    font-size: 1.2em;
+    padding: 6px 8px;
+  }
+
+  button,
+  input,
+  select {
+    font-size: 1em;
+  }
+
+  select.template-select {
+    margin-left: 0;
+    margin-top: 8px;
+  }
 }
